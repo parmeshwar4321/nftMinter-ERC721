@@ -31,7 +31,7 @@ const App = () => {
   useEffect(() => {
     window.ethereum.on("accountsChanged", handleAccountsChanged);
     checkIfWalletIsConnected();
-  })
+  });
   const handleAccountsChanged = (a) => {
     if (!a.length) {
       setIsConnected(false);
@@ -156,7 +156,7 @@ const App = () => {
         name.trim() === "" ||
         description.trim() === ""
       ) {
-        setStatus(
+        return setStatus(
           "❗Please make sure all fields are completed before minting."
         );
       }
@@ -165,12 +165,13 @@ const App = () => {
       metadata.name = name;
       metadata.image = url;
       metadata.description = description;
+      setLoading(true);
       const pinataResponse = await pinJSONToIPFS(metadata);
       setLoading(true);
       if (!pinataResponse.success) {
-        setStatus({
-          status: "😢 Something went wrong while uploading your tokenURI.",
-        });
+        return setStatus(
+          "😢 Something went wrong while uploading your tokenURI."
+        );
       }
       const tokenURI = pinataResponse.pinataUrl;
       const { ethereum } = window;
