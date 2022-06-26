@@ -13,7 +13,6 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK =
   "https://testnets.opensea.io/collection/nftname-onf7tcvipl";
 /* const TOTAL_MINT_COUNT = 50; */
-console.log(process.env.REACT_APP_PINATA_KEY);
 // const CONTRACT_ADDRESS = "0xfDe5CaD58ebF39441e99eda11a4FF089B4A4F613";
 const CONTRACT_ADDRESS = "0x22431D080C3A3b097db391e71525203656282C71";
 const App = () => {
