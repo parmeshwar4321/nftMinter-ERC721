@@ -20,6 +20,7 @@ contract MintERC721 is ERC721, Ownable {
     constructor() ERC721("MyNFT", "NFT")  {
                console.log("This is my NFT contract. Woah!");
     }
+    event NewEpicNFTMinted(address sender, uint256 tokenId);
 
     function setBaseURI(string memory baseURI_) external onlyOwner() {
         _baseURIextended = baseURI_;
@@ -64,6 +65,7 @@ contract MintERC721 is ERC721, Ownable {
         uint256 newItemId = _tokenIds.current();
         _mint(_recipient, newItemId);
         _setTokenURI(newItemId, _tokenURI);
+        emit NewEpicNFTMinted(msg.sender, newItemId);
 
         return newItemId;
     }

@@ -13,7 +13,7 @@ const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const OPENSEA_LINK = "https://testnets.opensea.io/collection/mynft-rbmzdfnvuy";
 /* const TOTAL_MINT_COUNT = 50; */
 // const CONTRACT_ADDRESS = "0xfDe5CaD58ebF39441e99eda11a4FF089B4A4F613";
-const CONTRACT_ADDRESS = "0x22431D080C3A3b097db391e71525203656282C71";
+const CONTRACT_ADDRESS = "0x37e4aAE3424f7cf531128980Aa223d700449E124";
 const App = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [currentAccount, setCurrentAccount] = useState("");
@@ -63,7 +63,7 @@ const App = () => {
     // String, hex code of the chainId of the Rinkebey test network
     const rinkebyChainId = "0x4";
     if (chainId !== rinkebyChainId) {
-      alert("You are not connected to the Rinkeby Test Network!");
+      setStatus("You are not connected to the Rinkeby Test Network!");
     }
 
     if (accounts.length > 0) {

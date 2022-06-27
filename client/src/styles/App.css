@@ -45,13 +45,6 @@
   font-weight: bold;
   color: white;
 }
-/* input{
-
-  border: none;
-  border:2px solid red;
-  border-radius: 1.2rem;
-
-} */
 
 input {
   border-top-style: hidden;
@@ -78,11 +71,6 @@ form{
 }
 
 
-/* .nftform {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
-  
-} */
 .nftform {
   border-radius: 1.2rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -90,10 +78,7 @@ form{
   padding: 100px;
   margin: 10px 300px;
 }
-  /* .nftform:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 
-  } */
 
 .connect-wallet-button {
   background: -webkit-linear-gradient(left, #60c657, #35aee2);
@@ -107,23 +92,11 @@ form{
   margin: auto;
 }
 
-/* .mint-button {
-  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
-  background-size: 200% 200%;
-  animation: gradient-animation 4s ease infinite;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-} */
 .mint-button {
   background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
-  /* display: flex; */
   margin: inherit;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 .mint-button:disabled {
   cursor: not-allowed;
